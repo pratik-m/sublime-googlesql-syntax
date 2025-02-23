@@ -14,7 +14,7 @@ first_line_match: |-
   )
 
 variables:
-  end_identifier: (?=[ \t]*(?:[^\w'"`. \t]|$))
+  end_identifier: (?=[ \t]*(?:[^\w\-'"`. \t]|$))
 
 contexts:
   prototype:
