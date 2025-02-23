@@ -141,7 +141,7 @@ contexts:
     - match: (?i)\b(STRING_AGG)(?=\s*\()
       comment: List of built-in array functions
       scope: support.function.array_aggregate.sql
-    - match: (?i)\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER)\b
+    - match: (?i)\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER|FORMAT)\b
       scope: support.function.string.sql
     - match: \b(\w+?)\.(\w+)\b
       captures:
@@ -225,6 +225,24 @@ contexts:
         1: punctuation.definition.string.begin.sql
         3: punctuation.definition.string.end.sql
   strings:
+    - match: "'''"
+      scope: punctuation.definition.string.begin.sql
+      push:
+        - meta_include_prototype: false
+        - meta_scope: string.quoted.single.sql
+        - match: "'''"
+          scope: punctuation.definition.string.end.sql
+          pop: true
+        - include: string-escape
+    - match: '"""'
+      scope: punctuation.definition.string.begin.sql
+      push:
+        - meta_include_prototype: false
+        - meta_scope: string.quoted.single.sql
+        - match: '"""'
+          scope: punctuation.definition.string.end.sql
+          pop: true
+        - include: string-escape
     - match: "'"
       scope: punctuation.definition.string.begin.sql
       push:
