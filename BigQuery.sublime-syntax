@@ -138,6 +138,9 @@ contexts:
     - match: (?i)\b(AVG|COUNT|MIN|MAX|SUM)(?=\s*\()
       comment: List of SQL99 built-in functions from http://www.oreilly.com/catalog/sqlnut/chapter/ch04.html
       scope: support.function.aggregate.sql
+    - match: (?i)\b(STRING_AGG)(?=\s*\()
+      comment: List of built-in array functions
+      scope: support.function.array_aggregate.sql
     - match: (?i)\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER)\b
       scope: support.function.string.sql
     - match: \b(\w+?)\.(\w+)\b
