@@ -135,7 +135,7 @@ contexts:
     - match: (?i)\b(CURRENT_(DATE|TIME(STAMP)?|USER)|(SESSION|SYSTEM)_USER)\b
       comment: List of SQL99 built-in functions from http://www.oreilly.com/catalog/sqlnut/chapter/ch04.html
       scope: support.function.scalar.sql
-    - match: (?i)\b(AVG|COUNT|MIN|MAX|SUM)(?=\s*\()
+    - match: (?i)\b(ANY_VALUE|APPROX_COUNT_DISTINCT|APPROX_QUANTILES|APPROX_TOP_COUNT|APPROX_TOP_SUM|ARRAY_AGG|ARRAY_CONCAT_AGG|AVG|BIT_AND|BIT_OR|BIT_XOR|Computes|CORR|COUNT|COUNTIF|COVAR_POP|COVAR_SAMP|GROUPING|LOGICAL_AND|LOGICAL_OR|MAX|MAX_BY|MIN|MIN_BY|PERCENTILE_CONT|ST_CENTROID_AGG|ST_EXTENT|ST_UNION_AGG|STDDEV|STDDEV_POP|STDDEV_SAMP|STRING_AGG|SUM|VAR_POP|VAR_SAMP|VARIANCE)(?=\s*\()
       comment: List of SQL99 built-in functions from http://www.oreilly.com/catalog/sqlnut/chapter/ch04.html
       scope: support.function.aggregate.sql
     - match: (?i)\b(STRING_AGG)(?=\s*\()
