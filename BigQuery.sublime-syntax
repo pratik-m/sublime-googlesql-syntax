@@ -153,6 +153,9 @@ contexts:
       scope: support.function.string.sql
       comment: List of BigQuery string function https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions
 
+    - match: (?i)\b(CUME_DIST|DENSE_RANK|FIRST_VALUE|LAG|LAST_VALUE|LEAD|NTH_VALUE|NTILE|PERCENT_RANK|PERCENTILE_CONT|PERCENTILE_DISC|RANK|ROW_NUMBER|ST_CLUSTERDBSCAN)(?=\s*\()
+      scope: support.function.window_function.sql
+      comment: List of BigQuery window function https://cloud.google.com/bigquery/docs/reference/standard-sql/window-functions
 
     - match: \b(\w+?)\.(\w+)\b
       captures:
