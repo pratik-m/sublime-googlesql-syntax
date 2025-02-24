@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: BigQuery
+name: GoogleSQL
 scope: source.sql
 
 file_extensions:
